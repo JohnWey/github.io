@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-22T10:30:41.909Z</updated>
+  <updated>2017-09-22T10:41:21.281Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,19 +17,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title></title>
+    <title>机器学习第二周总结</title>
     <link href="http://yoursite.com/2017/09/22/ML-Logistic%20Regression/"/>
     <id>http://yoursite.com/2017/09/22/ML-Logistic Regression/</id>
-    <published>2017-09-22T10:30:41.909Z</published>
-    <updated>2017-09-22T10:30:41.909Z</updated>
+    <published>2017-09-22T10:41:21.281Z</published>
+    <updated>2017-09-22T10:41:21.281Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="机器学习第二周总结——逻辑回归"><a href="#机器学习第二周总结——逻辑回归" class="headerlink" title="机器学习第二周总结——逻辑回归"></a>机器学习第二周总结——逻辑回归</h1><p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p><p>由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线</p><blockquote><p> $$g(z)=\frac{1}{1+e^{-z}}$$</p></blockquote><p><img src="C:\Users\admin\Desktop\QQ截图20170922090424.jpg" alt="image"></p><p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z\<0时,模拟值更靠近0.因此可以这样理解，当z>=0时，目标值为“是”的可能性更大；而当z\&lt;0时，目标值为“否”的可能性更大。</0时,模拟值更靠近0.因此可以这样理解，当z></p>]]></content>
+    <content type="html"><![CDATA[<script type="text/x-mathjax-config">MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});</script><script type="text/javascript" async src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script><h1 id="机器学习第二周总结——逻辑回归"><a href="#机器学习第二周总结——逻辑回归" class="headerlink" title="机器学习第二周总结——逻辑回归"></a>机器学习第二周总结——逻辑回归</h1><p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p><p>由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线</p><blockquote><p> $$g(z)=\frac{1}{1+e^{-z}}$$</p></blockquote><p><img src="C:\Users\admin\Desktop\QQ截图20170922090424.jpg" alt="image"></p><p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z<0时,模拟值更靠近0.因此可以这样理解，当z>=0时，目标值为“是”的可能性更大；而当z&lt;0时，目标值为“否”的可能性更大。</0时,模拟值更靠近0.因此可以这样理解，当z></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h1 id=&quot;机器学习第二周总结——逻辑回归&quot;&gt;&lt;a href=&quot;#机器学习第二周总结——逻辑回归&quot; class=&quot;headerlink&quot; title=&quot;机器学习第二周总结——逻辑回归&quot;&gt;&lt;/a&gt;机器学习第二周总结——逻辑回归&lt;/h1&gt;&lt;p&gt;逻辑回归主要用于解决分类问题。如：这
+        &lt;script type=&quot;text/x-mathjax-config&quot;&gt;
+MathJax.Hub.Config({
+tex2jax: {inlineMath: [[&#39;$&#39;,&#39;$&#39;], [&#39;\\(&#39;,&#39;\\)&#39;]]}
+});
+&lt;/script&gt;
+&lt;script type=&quot;tex
       
     
     </summary>
