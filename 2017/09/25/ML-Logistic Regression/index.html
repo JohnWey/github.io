@@ -69,19 +69,19 @@
 
 
 
-<meta name="description" content="机器学习第二周总结——逻辑回归逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。 由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线  g(z)=\frac{1}{1+e^{-z}}  作为我们的预测模型。这个模型的取值范围是[0,1]，当z&amp;gt;=0时，该模型的值更靠近1；而当z=0时，目">
+<meta name="description" content="机器学习第二周总结——逻辑回归 逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。 由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线  $$g(z)=\frac{1}{1+e^{-z}}$$   作为我们的预测模型。这个模型的取值范围是[0,1]，当z&amp;gt;=0时，该模型的值更靠近1；而当">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习第二周总结">
 <meta property="og:url" content="http://yoursite.com/2017/09/25/ML-Logistic Regression/index.html">
 <meta property="og:site_name" content="JohnWey&#39;s Blog">
-<meta property="og:description" content="机器学习第二周总结——逻辑回归逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。 由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线  g(z)=\frac{1}{1+e^{-z}}  作为我们的预测模型。这个模型的取值范围是[0,1]，当z&amp;gt;=0时，该模型的值更靠近1；而当z=0时，目">
+<meta property="og:description" content="机器学习第二周总结——逻辑回归 逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。 由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线  $$g(z)=\frac{1}{1+e^{-z}}$$   作为我们的预测模型。这个模型的取值范围是[0,1]，当z&amp;gt;=0时，该模型的值更靠近1；而当">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:image" content="c:/Users/admin/Desktop/QQ截图20170922090424.jpg">
+<meta property="og:image" content="c:%5CUsers%5Cadmin%5CDesktop%5CQQ%E6%88%AA%E5%9B%BE20170922090424.jpg">
 <meta property="og:updated_time" content="2017-09-25T10:31:11.892Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习第二周总结">
-<meta name="twitter:description" content="机器学习第二周总结——逻辑回归逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。 由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线  g(z)=\frac{1}{1+e^{-z}}  作为我们的预测模型。这个模型的取值范围是[0,1]，当z&amp;gt;=0时，该模型的值更靠近1；而当z=0时，目">
-<meta name="twitter:image" content="c:/Users/admin/Desktop/QQ截图20170922090424.jpg">
+<meta name="twitter:description" content="机器学习第二周总结——逻辑回归 逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。 由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线  $$g(z)=\frac{1}{1+e^{-z}}$$   作为我们的预测模型。这个模型的取值范围是[0,1]，当z&amp;gt;=0时，该模型的值更靠近1；而当">
+<meta name="twitter:image" content="c:%5CUsers%5Cadmin%5CDesktop%5CQQ%E6%88%AA%E5%9B%BE20170922090424.jpg">
 
 
 
@@ -327,12 +327,14 @@
       
 
       
-        <h1 id="机器学习第二周总结——逻辑回归"><a href="#机器学习第二周总结——逻辑回归" class="headerlink" title="机器学习第二周总结——逻辑回归"></a>机器学习第二周总结——逻辑回归</h1><p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p>
+        <h1>机器学习第二周总结——逻辑回归</h1>
+<p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p>
 <p>由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线</p>
 <blockquote>
-<script type="math/tex; mode=display">g(z)=\frac{1}{1+e^{-z}}</script></blockquote>
-<p><img src="C:\Users\admin\Desktop\QQ截图20170922090424.jpg" alt="image"></p>
-<p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z<0时,模拟值更靠近0.因此可以这样理解，当z>=0时，目标值为“是”的可能性更大；而当z&lt;0时，目标值为“否”的可能性更大。</0时,模拟值更靠近0.因此可以这样理解，当z></p>
+<p>$$g(z)=\frac{1}{1+e^{-z}}$$</p>
+</blockquote>
+<p><img src="C:%5CUsers%5Cadmin%5CDesktop%5CQQ%E6%88%AA%E5%9B%BE20170922090424.jpg" alt="image"></p>
+<p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z&lt;0时,模拟值更靠近0.因此可以这样理解，当z&gt;=0时，目标值为“是”的可能性更大；而当z&lt;0时，目标值为“否”的可能性更大。</p>
 
       
     </div>
@@ -491,7 +493,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#机器学习第二周总结——逻辑回归"><span class="nav-number">1.</span> <span class="nav-text">机器学习第二周总结——逻辑回归</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#undefined"><span class="nav-number">1.</span> <span class="nav-text">机器学习第二周总结——逻辑回归</span></a></li></ol></div>
             
 
           </div>
