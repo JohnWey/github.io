@@ -69,13 +69,21 @@
 
 
 
-<meta property="og:type" content="website">
+<meta name="description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
+<meta property="og:type" content="article">
 <meta property="og:title" content="JohnWey&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2017/09/26/ML-Linear Regression/index.html">
 <meta property="og:site_name" content="JohnWey&#39;s Blog">
+<meta property="og:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:image" content="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
+<meta property="og:updated_time" content="2017-09-26T07:59:32.370Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JohnWey&#39;s Blog">
+<meta name="twitter:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
+<meta name="twitter:image" content="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 
 
 
@@ -105,13 +113,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/26/ML-Linear Regression/"/>
 
 
 
 
 
-  <title>JohnWey's Blog</title>
+  <title> | JohnWey's Blog</title>
   
 
 
@@ -130,8 +138,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -224,9 +231,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -256,9 +263,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/26/ML-Linear Regression/" itemprop="url">未命名</a></h1>
+          <h1 class="post-title" itemprop="name headline"></h1>
         
 
         <div class="post-meta">
@@ -301,6 +306,11 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv"><i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+            </span>
+          
 
           
 
@@ -319,9 +329,7 @@
       
 
       
-        
-          
-            <p>先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。</p>
+        <p>先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。</p>
 <hr>
 <h4 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a><strong>什么是机器学习？</strong></h4><ul>
 <li><p><em>Arthur Samuel(1959):</em></p>
@@ -457,8 +465,6 @@
 <p><strong>梯度方法和正规方程方法比较：</strong><br>| 梯度下降方法       | 正规方程        |<br>| :———– | :———- |<br>| 适合特征大于1W的情况  | 适合特征小于1W的情况 |<br>| 需要归一化（特征标准化） | 不需要归一化      |<br>| 方法相对复杂       | 方法简单        |</p>
 <p>#####<strong> 注：以上数学推导过程若有不严谨之处，欢迎指出！</strong></p>
 
-          
-        
       
     </div>
     
@@ -475,149 +481,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/25/ML-Logistic Regression/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JohnWey's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/25/ML-Logistic Regression/" itemprop="url">机器学习第二周总结</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-25T10:31:11+00:00">
-                2017-09-25
-              </time>
+              <a href="/2017/09/25/ML-Logistic Regression/" rel="next" title="机器学习第二周总结">
+                <i class="fa fa-chevron-left"></i> 机器学习第二周总结
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/25/ML-Logistic Regression/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/25/ML-Logistic Regression/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <h1 id="机器学习第二周总结——逻辑回归"><a href="#机器学习第二周总结——逻辑回归" class="headerlink" title="机器学习第二周总结——逻辑回归"></a>机器学习第二周总结——逻辑回归</h1><p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p>
-<p>由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线</p>
-<blockquote>
-<p> $$g(z)=\frac{1}{1+e^{-z}}$$</p>
-</blockquote>
-<p><img src="C:\Users\admin\Desktop\QQ截图20170922090424.jpg" alt="image"></p>
-<p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z<0时,模拟值更靠近0.因此可以这样理解，当z>=0时，目标值为“是”的可能性更大；而当z&lt;0时，目标值为“否”的可能性更大。</0时,模拟值更靠近0.因此可以这样理解，当z></p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -627,149 +512,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/13/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Wei">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="JohnWey's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/13/hello-world/" itemprop="url">Hello World</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-13T09:03:46+00:00">
-                2017-09-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-                <a href="/2017/09/13/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count"
-                        data-disqus-identifier="2017/09/13/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -777,6 +524,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -797,8 +555,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           
             <p class="site-author-name" itemprop="name">Wei</p>
@@ -841,6 +608,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#什么是机器学习？"><span class="nav-number">1.</span> <span class="nav-text">什么是机器学习？</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#机器学习分类"><span class="nav-number">2.</span> <span class="nav-text">机器学习分类</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-梯度下降"><span class="nav-number">2.1.</span> <span class="nav-text">1. 梯度下降</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-正规方程"><span class="nav-number">2.2.</span> <span class="nav-text">2. 正规方程</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1006,6 +789,18 @@
     
 
     
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://yoursite.com/2017/09/26/ML-Linear Regression/';
+          this.page.identifier = '2017/09/26/ML-Linear Regression/';
+          this.page.title = '';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://keeplearning365.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
 
   
 
@@ -1042,26 +837,6 @@
   
 
   
-  
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-          processEscapes: true,
-          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-        }
-      });
-    </script>
-
-    <script type="text/x-mathjax-config">
-      MathJax.Hub.Queue(function() {
-        var all = MathJax.Hub.getAllJax(), i;
-        for (i=0; i < all.length; i += 1) {
-          all[i].SourceElement().parentNode.className += ' has-jax';
-        }
-      });
-    </script>
-    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
