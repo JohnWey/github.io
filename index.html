@@ -270,7 +270,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T08:23:57+00:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-26T08:32:18+00:00">
                 2017-09-26
               </time>
             
@@ -338,13 +338,11 @@
 <hr>
 <h4 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a><strong>机器学习分类</strong></h4><p>机器学习涉及的范围很广，针对不同的问题，学习策略也很多，但总体而言大致可以分为<strong>监督学习</strong>和<strong>非监督学习</strong>两种（还有半监督学习和强化学习）。不同的问题需要使用不同的策略。</p>
 <p>还是把这两种策略的含义搞清楚先：</p>
-<p>#####<strong>什么是监督学习？</strong>#####</p>
-<blockquote>
+<h5 id="什么是监督学习？"><a href="#什么是监督学习？" class="headerlink" title="什么是监督学习？"></a><strong>什么是监督学习？</strong></h5><blockquote>
 <p>可以理解为<strong>一部分数据的答案已经知道了</strong>。比如我们要预测未来大盘的点位，在历史中大盘的点位已经知道了；再比如我们要让机器知道给它的图片是个帅哥还是美女，前提是我们已经知道了这个图片是帅哥还是美女。</p>
 </blockquote>
 <p>可想而知，如果需要人工去分类（打标），是一个多大的工程。这也孕育出了很多以出售打标数据盈利的公司。</p>
-<p>#####<strong>什么是无监督学习？</strong>#####</p>
-<blockquote>
+<h5 id="什么是无监督学习？"><a href="#什么是无监督学习？" class="headerlink" title="什么是无监督学习？"></a><strong>什么是无监督学习？</strong></h5><blockquote>
 <p>和监督学习相反，<strong>数据的答案事先我们不知道</strong>。而寻找答案是一个无中生有的过程。比如你遇到一群外星人，这群外星人各自有着不同的特征，你需要通过聚类的方法把有相同特征的外星人分组到一起，然后研究他们哪些对人类友好，哪些对人类有威胁，这叫无监督学习。</p>
 </blockquote>
 <p><em>算法一览：</em></p>
@@ -380,8 +378,7 @@
 </tbody>
 </table>
 <hr>
-<p>####<strong>1. 能预测未来的神奇算法——线性回归</strong>####</p>
-<p>说到线性回归，其实我们初中的时候就学过它的简单方程式，只不过那会儿我们没有安利这样一个高大上的名字，我们那会儿叫<strong>斜截公式</strong>：<br>$$<br>y = kx + b<br>$$<br>来看看只有一个参数的<strong>单参数线性回归模型</strong>：<br>$$<br>h_\theta(x^i)=\theta_0+\theta_1 x_1^i  (其中 x_0^i=1，x_1^i表示一个特征，这个特征有i个值 )<br>$$<br>所谓的特征就是二维表中具有计算意义的一列数据，比如</p>
+<h4 id="1-能预测未来的神奇算法——线性回归"><a href="#1-能预测未来的神奇算法——线性回归" class="headerlink" title="1. 能预测未来的神奇算法——线性回归"></a><strong>1. 能预测未来的神奇算法——线性回归</strong></h4><p>说到线性回归，其实我们初中的时候就学过它的简单方程式，只不过那会儿我们没有安利这样一个高大上的名字，我们那会儿叫<strong>斜截公式</strong>：<br>$$<br>y = kx + b<br>$$<br>来看看只有一个参数的<strong>单参数线性回归模型</strong>：<br>$$<br>h_\theta(x^i)=\theta_0+\theta_1 x_1^i  (其中 x_0^i=1，x_1^i表示一个特征，这个特征有i个值 )<br>$$<br>所谓的特征就是二维表中具有计算意义的一列数据，比如</p>
 <table>
 <thead>
 <tr>
@@ -414,7 +411,7 @@
 </tbody>
 </table>
 <p>其中Sex是一个特征，High是另一个特征，ID不是个特征，它只是个序列索引而已。他们的i都是4，因为有4条数据。是不是秒懂？：） 是的，在一元线性回归算法中，我们就是用一条倾斜的直线来<strong>预测未来</strong>。原来我们从初中时就可以预测未来了。：）</p>
-<p>#####<strong>为什么我们可以用类似一条直线来预测呢？</strong>#####<br>这个问题也可以换个说法，<strong>在什么情况下可以使用线性回归算法？</strong></p>
+<h5 id="为什么我们可以用类似一条直线来预测呢？"><a href="#为什么我们可以用类似一条直线来预测呢？" class="headerlink" title="为什么我们可以用类似一条直线来预测呢？"></a><strong>为什么我们可以用类似一条直线来预测呢？</strong></h5><p>这个问题也可以换个说法，<strong>在什么情况下可以使用线性回归算法？</strong></p>
 <blockquote>
 <ol>
 <li>看数据的分布是有一定规律的，可以通过直线或曲线来拟合数据的中心。</li>
@@ -423,7 +420,7 @@
 </blockquote>
 <p>再来看看多参数的<strong>线性回归模型</strong>：<br>$$<br>h_\theta(x^i)=\theta_0 x_0^i+\theta_1 x_1^i+\theta_2 x_2^i \cdots+\theta_n x<em>n^i<br>$$<br>用<strong>向量表示</strong>：<br>$$<br>h</em>\theta(x)=\theta_0\begin{bmatrix} x_0^1 \x_0^2\ \vdots \x_0^n \end{bmatrix}<br>+\theta_1\begin{bmatrix} x_1^1 \x_1^2\ \vdots \x_1^n \end{bmatrix}<br>+\cdots<br>+\theta_1\begin{bmatrix} x_1^1 \x_1^2\ \vdots \x_1^n \end{bmatrix}<br>$$<br>用<strong>矩阵</strong>表示：<br>$$<br>H=\begin{bmatrix}<br>x_0^1 &amp; x_1^1 &amp; x_2^1  &amp; \cdots &amp; x_n^1 \<br>x_0^2 &amp; x_1^2 &amp; x_2^2  &amp; \cdots &amp; x_n^2 \<br>x_0^3 &amp; x_1^3 &amp; x_2^3  &amp; \cdots &amp; x_n^3 \<br>\vdots &amp; \vdots &amp; \vdots &amp; \ddots &amp; \vdots\<br>x_0^n &amp; x_1^n &amp; x_2^n  &amp; \cdots &amp; x_n^n \<br>\end{bmatrix}<em><br>\begin{bmatrix}\theta_0 \<br>\theta_1 \<br>\theta_2 \<br>\vdots \<br>\theta_n \<br>\end{bmatrix}=X\theta<br>$$<br>简不简单？有了这个公式，我们就能<em>*预测未来</em></em>了：）</p>
 <hr>
-<p>####<strong>2. 如何预测？</strong>####<br>上面那个模型中$x$是确定的，即我们的各种特征数据，不确定的是$\theta$值。只要找到了$\theta$，我们就可以写出那个模型方程式，再把新的数据代入到$x$中，就知道了<strong>未来</strong>。所以，如何算出$\theta$?</p>
+<h4 id="2-如何预测？"><a href="#2-如何预测？" class="headerlink" title="2. 如何预测？"></a><strong>2. 如何预测？</strong></h4><p>上面那个模型中$x$是确定的，即我们的各种特征数据，不确定的是$\theta$值。只要找到了$\theta$，我们就可以写出那个模型方程式，再把新的数据代入到$x$中，就知道了<strong>未来</strong>。所以，如何算出$\theta$?</p>
 <p>针对一元回归模型，不同的$\theta$意味这不同的斜率，不同的斜率他们和真实数据的拟合程度是不一样的。如何确定$\theta$使得预测的误差最小呢？<br>$$<br>J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h\theta(x^i)-y^i)^2<br>$$</p>
 <p>其中$y^i$表示真实数据，而$h_\theta(x^i)$表示预测数据。<br><strong>说人话：$\theta$要满足这样的条件，即预测出来各个点的值与真实值之间的差的平方和最小。</strong></p>
 <p>现在的问题就转换成了<strong>求$J(\theta)$的最小值</strong>问题了！<br>即：<br>$$<br> \min_{\theta_1,\theta_2 \cdots\theta_n}J(\theta_1,\theta_2,\cdots,\theta_n)<br>$$<br>这个问题有两种解决方案：</p>
@@ -433,7 +430,7 @@
 </blockquote>
 <p>知道了这个我们再来看看<strong>梯度下降算法公式</strong>：</p>
 <blockquote>
-<p>$$\theta_j := \theta_j - \alpha <em> \frac{\partial J}{\partial\theta_j}  \tag{</em>}$$</p>
+<p>$$ \theta_j := \theta_j - \alpha <em> \frac{\partial J}{\partial\theta_j}  \tag{</em>}$$</p>
 </blockquote>
 <p>$\frac{\partial J}{\partial\theta_j}$ 可以简单的理解为上图中的$tga$，$\alpha$是个正常数，学名叫<strong>学习速率</strong>。这个$tga$很神奇，在小于90°，它是个正实数；在大于90°时是个负实数。</p>
 <p>所以，对于梯度下降算法公式，</p>
@@ -454,8 +451,7 @@
 <p>$$<br>(X^TX)^{-1}(X^TX)\theta=(X^TX)^{-1}X^Ty<br>$$</p>
 <p>$$<br>\theta=(X^TX)^{-1}X^Ty \tag{*}<br>$$</p>
 <p><strong>梯度方法和正规方程方法比较：</strong><br>| 梯度下降方法       | 正规方程        |<br>| :———– | :———- |<br>| 适合特征大于1W的情况  | 适合特征小于1W的情况 |<br>| 需要归一化（特征标准化） | 不需要归一化      |<br>| 方法相对复杂       | 方法简单        |</p>
-<p>#####<strong> 注：以上数学推导过程若有不严谨之处，欢迎指出！</strong>#####</p>
-
+<h5 id="注：以上数学推导过程若有不严谨之处，欢迎指出！"><a href="#注：以上数学推导过程若有不严谨之处，欢迎指出！" class="headerlink" title=" 注：以上数学推导过程若有不严谨之处，欢迎指出！"></a><strong> 注：以上数学推导过程若有不严谨之处，欢迎指出！</strong></h5>
           
         
       
