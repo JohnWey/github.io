@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-09-27T01:06:12.854Z">
+<meta property="og:updated_time" content="2017-09-27T02:45:10.729Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习第一周总结">
 <meta name="twitter:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
@@ -87,7 +87,7 @@
       <section id="main"><article id="post-ML-Linear Regression" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/09/27/ML-Linear Regression/" class="article-date">
-  <time datetime="2017-09-27T01:06:12.854Z" itemprop="datePublished">2017-09-27</time>
+  <time datetime="2017-09-27T02:45:10.758Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -254,7 +254,7 @@ J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h\theta(x^i)-y^i)^2</script><p>其中$y^i​$
 <script type="math/tex; mode=display">
 \theta_j := \theta_j - \alpha\frac{\partial J}{\partial\theta_j} \tag{*}</script><p>$\frac{\partial J}{\partial\theta_j}$ 可以简单的理解为上图中的$tga$，$\alpha$是个正常数，学名叫<strong>学习速率</strong>。这个$tga$很神奇，在小于90°，它是个正实数；在大于90°时是个负实数。</p>
 <p>所以，对于梯度下降算法公式，<br>当T倾斜向上，即角度小于90°时，$\alpha \frac{\partial J}{\partial\theta_j}$值为正，$\theta_j$从大变小，$\frac{\partial J}{\partial\theta_j}$不断的趋近于0，$\theta_j$不断的向左移动减小，直到移动到曲线的底部；<br><img src="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>当T倾斜向下时，即角度大于90°时，$\alpha  \frac{\partial J}{\partial\theta_j}$值为负，$\theta_j$从小变大，$\frac{\partial J}{\partial\theta_j}$不断的趋近于0，$\theta_j$不断的向右移动增大，直到移动到曲线的底部<br><img src="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>理解了原理，下面就是如何算$\frac{\partial J}{\partial\theta_j}$了：</p>
+<p>理解了原理，下面就是如何算<script type="math/tex">\frac{\partial J}{\partial\theta_j}</script>了：</p>
 <script type="math/tex; mode=display">
 \frac{\partial J}{\partial\theta_j}=\partial\frac{\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2 }{\partial\theta_j}</script><p>把$\frac{1}{2m}\sum<em>{i=1}^m(h</em>\theta(x^i)-y^i)^2$展开：</p>
 <script type="math/tex; mode=display">
@@ -337,7 +337,7 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82f7j610000dyxuz2lwoczc" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82fhpz70000fgxulcgyc41q" class="article-share-link">Share</a>
         
       </div>
     </footer>
