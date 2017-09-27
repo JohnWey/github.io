@@ -78,10 +78,10 @@
     <div class="outer">
       <section id="main">
   
-    <article id="post-MathJax-MarkDown-Compatibility-Problem" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-ML-Logistic Regression" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/" class="article-date">
-  <time datetime="2017-09-27T04:24:26.827Z" itemprop="datePublished">2017-09-27</time>
+    <h3 href="/2017/09/27/ML-Logistic Regression/" class="article-date">
+  <time datetime="2017-09-27T07:12:51.919Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -94,7 +94,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/">MathJax 和 MarkDown兼容性的问题</a>
+      <a class="article-title" href="/2017/09/27/ML-Logistic Regression/">机器学习第二周总结——Logistic Regression</a>
     </h1>
   
 
@@ -103,22 +103,19 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        <p>由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。</p>
-<p>网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：</p>
-<ol>
-<li>放弃next主题，使用hexo-theme-paperbox代替<a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank" rel="external">github</a></li>
-<li>修改该主题下_config.yml文件，配置mathjax: true</li>
-<li>卸载默认的mark渲染组件，安装新的渲染组件<br>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</li>
-<li>更新站点并重启服务<br>hexo clean<br>hexo g -d<br>hexo s</li>
-</ol>
-<p>需要注意的是：对于需要在某一行显示数学公式的情况，只加$…$这样是不行的，需要在两个$符号首尾加上（`）号，如：`$….$`</p>
+        <h1 id="机器学习第二周总结——逻辑回归"><a href="#机器学习第二周总结——逻辑回归" class="headerlink" title="机器学习第二周总结——逻辑回归"></a>机器学习第二周总结——逻辑回归</h1><p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p>
+<p>由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线</p>
+<blockquote>
+<script type="math/tex; mode=display">g(z)=\frac{1}{1+e^{-z}}</script></blockquote>
+<p><img src="C:\Users\admin\Desktop\QQ截图20170922090424.jpg" alt="image"></p>
+<p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z<0时,模拟值更靠近0.因此可以这样理解，当z>=0时，目标值为“是”的可能性更大；而当z&lt;0时，目标值为“否”的可能性更大。</0时,模拟值更靠近0.因此可以这样理解，当z></p>
 
       
     </div>
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/27/MathJax-MarkDown-Compatibility-Problem/" data-id="cj82la0yu00041bxujq9oo12j" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/ML-Logistic Regression/" data-id="cj82gb5ar0002i5xuvxtbwple" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -134,7 +131,7 @@
     <article id="post-ML-Linear Regression" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/09/27/ML-Linear Regression/" class="article-date">
-  <time datetime="2017-09-27T03:35:19.917Z" itemprop="datePublished">2017-09-27</time>
+  <time datetime="2017-09-27T07:12:11.875Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -147,7 +144,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/27/ML-Linear Regression/">机器学习第一周总结</a>
+      <a class="article-title" href="/2017/09/27/ML-Linear Regression/">机器学习第一周总结——Linear Regression</a>
     </h1>
   
 
@@ -409,7 +406,7 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82la0y700001bxuygyr4w3x" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82gb5ag0000i5xu3diwz1xj" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -422,10 +419,10 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
 
 
   
-    <article id="post-ML-Logistic Regression" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-MathJax-MarkDown-Compatibility-Problem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/2017/09/25/ML-Logistic Regression/" class="article-date">
-  <time datetime="2017-09-25T10:31:11.911Z" itemprop="datePublished">2017-09-25</time>
+    <h3 href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/" class="article-date">
+  <time datetime="2017-09-27T04:24:26.827Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -438,7 +435,7 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/09/25/ML-Logistic Regression/">机器学习第二周总结</a>
+      <a class="article-title" href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/">MathJax 和 MarkDown兼容性的问题</a>
     </h1>
   
 
@@ -447,19 +444,22 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
     <div class="article-entry" itemprop="articleBody">
       
         
-        <h1 id="机器学习第二周总结——逻辑回归"><a href="#机器学习第二周总结——逻辑回归" class="headerlink" title="机器学习第二周总结——逻辑回归"></a>机器学习第二周总结——逻辑回归</h1><p>逻辑回归主要用于解决分类问题。如：这个外星人是男还是女。但有个前提，也是监督学习的特点，即训练样本中目标列是已经有值的。</p>
-<p>由于目标列的值只有“是”（用1表示）和“否”（用0来表示），因此可以用类似log的曲线</p>
-<blockquote>
-<script type="math/tex; mode=display">g(z)=\frac{1}{1+e^{-z}}</script></blockquote>
-<p><img src="C:\Users\admin\Desktop\QQ截图20170922090424.jpg" alt="image"></p>
-<p>作为我们的预测模型。这个模型的取值范围是[0,1]，当z&gt;=0时，该模型的值更靠近1；而当z<0时,模拟值更靠近0.因此可以这样理解，当z>=0时，目标值为“是”的可能性更大；而当z&lt;0时，目标值为“否”的可能性更大。</0时,模拟值更靠近0.因此可以这样理解，当z></p>
+        <p>由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。</p>
+<p>网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：</p>
+<ol>
+<li>放弃next主题，使用hexo-theme-paperbox代替<a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank" rel="external">github</a></li>
+<li>修改该主题下_config.yml文件，配置mathjax: true</li>
+<li>卸载默认的mark渲染组件，安装新的渲染组件<br>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</li>
+<li>更新站点并重启服务<br>hexo clean<br>hexo g -d<br>hexo s</li>
+</ol>
+<p>需要注意的是：对于需要在某一行显示数学公式的情况，只加$…$这样是不行的，需要在两个$符号首尾加上（`）号，如：`$….$`</p>
 
       
     </div>
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/25/ML-Logistic Regression/" data-id="cj82la0ym00021bxuzfnfe0uj" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/MathJax-MarkDown-Compatibility-Problem/" data-id="cj82j0yti0000o4xurl9z3m2a" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -512,7 +512,7 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/13/hello-world/" data-id="cj82la0z700051bxupv4bi1ia" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/13/hello-world/" data-id="cj82gb5aw0004i5xuyxu7pi3l" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -537,15 +537,15 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
       <ul>
         
           <li>
+            <a href="/2017/09/27/ML-Logistic Regression/">机器学习第二周总结——Logistic Regression</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/27/ML-Linear Regression/">机器学习第一周总结——Linear Regression</a>
+          </li>
+        
+          <li>
             <a href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/">MathJax 和 MarkDown兼容性的问题</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/27/ML-Linear Regression/">机器学习第一周总结</a>
-          </li>
-        
-          <li>
-            <a href="/2017/09/25/ML-Logistic Regression/">机器学习第二周总结</a>
           </li>
         
           <li>
