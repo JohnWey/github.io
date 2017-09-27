@@ -7,20 +7,18 @@
   
   <title>机器学习第一周总结 | JohnWey&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
+  <meta name="description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习? Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
 <meta property="og:type" content="article">
 <meta property="og:title" content="机器学习第一周总结">
 <meta property="og:url" content="http://yoursite.com/2017/09/27/ML-Linear Regression/index.html">
 <meta property="og:site_name" content="JohnWey&#39;s Blog">
-<meta property="og:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
+<meta property="og:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习? Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:image" content="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-09-27T02:45:10.729Z">
+<meta property="og:updated_time" content="2017-09-27T03:06:49.173Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习第一周总结">
-<meta name="twitter:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习？ Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
+<meta name="twitter:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习? Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
 <meta name="twitter:image" content="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
   
     <link rel="alternative" href="/atom.xml" title="JohnWey&#39;s Blog" type="application/atom+xml">
@@ -87,7 +85,7 @@
       <section id="main"><article id="post-ML-Linear Regression" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/09/27/ML-Linear Regression/" class="article-date">
-  <time datetime="2017-09-27T02:45:10.758Z" itemprop="datePublished">2017-09-27</time>
+  <time datetime="2017-09-27T03:06:49.173Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -111,7 +109,7 @@
         
         <p>先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。</p>
 <hr>
-<h4 id="什么是机器学习？"><a href="#什么是机器学习？" class="headerlink" title="什么是机器学习？"></a><strong>什么是机器学习？</strong></h4><ul>
+<h3 id="什么是机器学习"><a href="#什么是机器学习" class="headerlink" title="什么是机器学习?"></a>什么是机器学习?</h3><ul>
 <li><p><em>Arthur Samuel(1959):</em></p>
 <blockquote>
 <p>Field of study that gives computers the ability to learn without being explicitly programmed.<br><strong>说人话：不需要太多的编程就能使计算机拥有学习某一领域的能力。</strong>  </p>
@@ -124,9 +122,9 @@
 </li>
 </ul>
 <hr>
-<h4 id="机器学习分类"><a href="#机器学习分类" class="headerlink" title="机器学习分类"></a><strong>机器学习分类</strong></h4><p>机器学习涉及的范围很广，针对不同的问题，学习策略也很多，但总体而言大致可以分为<strong>监督学习</strong>和<strong>非监督学习</strong>两种（还有半监督学习和强化学习）。不同的问题需要使用不同的策略。</p>
-<p>还是把这两种策略的含义搞清楚先：</p>
-<h5 id="什么是监督学习？"><a href="#什么是监督学习？" class="headerlink" title="什么是监督学习？"></a><strong>什么是监督学习？</strong></h5><blockquote>
+<p><strong>机器学习分类</strong><br>机器学习涉及的范围很广，针对不同的问题，学习策略也很多，但总体而言大致可以分为<strong>监督学习</strong>和<strong>非监督学习</strong>两种（还有半监督学习和强化学习）。不同的问题需要使用不同的策略。</p>
+<p>还是把这两种策略的含义搞清楚先：<br><em>监督学习？</em></p>
+<blockquote>
 <p>可以理解为<strong>一部分数据的答案已经知道了</strong>。比如我们要预测未来大盘的点位，在历史中大盘的点位已经知道了；再比如我们要让机器知道给它的图片是个帅哥还是美女，前提是我们已经知道了这个图片是帅哥还是美女。</p>
 </blockquote>
 <p>可想而知，如果需要人工去分类（打标），是一个多大的工程。这也孕育出了很多以出售打标数据盈利的公司。</p>
@@ -227,7 +225,7 @@ H=\begin{bmatrix}
 x_0^1 & x_1^1 & x_2^1  & \cdots & x_n^1 \\
 x_0^2 & x_1^2 & x_2^2  & \cdots & x_n^2 \\
 x_0^3 & x_1^3 & x_2^3  & \cdots & x_n^3 \\
-\vdots & \vdots & \vdots & \ddots & \vdots\\ 
+\vdots & \vdots & \vdots & \ddots & \vdots\\
 x_0^n & x_1^n & x_2^n  & \cdots & x_n^n \\
 \end{bmatrix}* 
 \begin{bmatrix}\theta_0 \\ 
@@ -237,32 +235,40 @@ x_0^n & x_1^n & x_2^n  & \cdots & x_n^n \\
 \theta_n \\
 \end{bmatrix}=X\theta</script><p>简不简单？有了这个公式，我们就能<strong>预测未来</strong>了：）</p>
 <hr>
-<h4 id="2-如何预测？"><a href="#2-如何预测？" class="headerlink" title="2. 如何预测？"></a><strong>2. 如何预测？</strong></h4><p>上面那个模型中$x$是确定的，即我们的各种特征数据，不确定的是$\theta$值。只要找到了$\theta$，我们就可以写出那个模型方程式，再把新的数据代入到$x$中，就知道了<strong>未来</strong>。所以，如何算出$\theta$?</p>
+<h4 id="2-如何预测？"><a href="#2-如何预测？" class="headerlink" title="2. 如何预测？"></a><strong>2. 如何预测？</strong></h4><p>上面那个模型中<script type="math/tex">x</script>是确定的，即我们的各种特征数据，不确定的是<script type="math/tex">\theta</script>值。只要找到了<script type="math/tex">\theta</script>，我们就可以写出那个模型方程式，再把新的数据代入到$x$中，就知道了<strong>未来</strong>。所以，如何算出<script type="math/tex">\theta</script>?</p>
 <p>针对一元回归模型，不同的$\theta$意味这不同的斜率，不同的斜率他们和真实数据的拟合程度是不一样的。如何确定$\theta$使得预测的误差最小呢？</p>
 <script type="math/tex; mode=display">
-J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h\theta(x^i)-y^i)^2</script><p>其中$y^i​$表示真实数据，而$h_\theta(x^i)​$表示预测数据。<br><strong>说人话：$\theta$要满足这样的条件，即预测出来各个点的值与真实值之间的差的平方和最小。</strong></p>
-<p>现在的问题就转换成了<strong>求$J(\theta)$的最小值</strong>问题了！<br>即：</p>
+J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h\theta(x^i)-y^i)^2</script><p>其中<script type="math/tex">y^i​</script>表示真实数据，而<script type="math/tex">h_\theta(x^i)​</script>表示预测数据。<br><strong>说人话：$\theta$要满足这样的条件，即预测出来各个点的值与真实值之间的差的平方和最小。</strong></p>
+<p>现在的问题就转换成了<strong>求<script type="math/tex">J(\theta)</script>的最小值</strong>问题了！<br>即：</p>
 <script type="math/tex; mode=display">
 \min_{\theta_1,\theta_2 \cdots\theta_n}J(\theta_1,\theta_2,\cdots,\theta_n)</script><p>这个问题有两种解决方案：</p>
 <h5 id="1-梯度下降"><a href="#1-梯度下降" class="headerlink" title="1. 梯度下降"></a><strong>1. 梯度下降</strong></h5><p>要了解梯度下降算法，首先要知道求导公式的意义：</p>
 <script type="math/tex; mode=display">
  \frac{\partial J}{\partial \theta}=\frac{\Delta y}{\Delta x}=tg \alpha</script><p><strong>说人话：每变化一点点$\theta$，随之而变的$J$变化了多少？</strong><br>还是没懂！？ 上一个百度图片：</p>
 <blockquote>
-<p><img src="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>图片中$\Delta x$就是变化的那一点点（对应$\partial \theta$或$\Delta y$），而对应的曲线$f(x)$，发生了$\Delta y$这么多变化。当N和M非常接近时（即$\Delta x$很小很小），我们可以用PQ的高度（$dy$）来近似NM的高度（其高度$dy$=在$x_0$处的斜率 * $\Delta x$）。</p>
+<p><img src="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>图片中<script type="math/tex">\Delta x</script>就是变化的那一点点（对应<script type="math/tex">\partial \theta</script>或<script type="math/tex">\Delta y</script>），而对应的曲线<script type="math/tex">f(x)</script>，发生了<script type="math/tex">\Delta y</script>这么多变化。当N和M非常接近时（即<script type="math/tex">\Delta x</script>很小很小），我们可以用PQ的高度（<script type="math/tex">dy</script>）来近似NM的高度（其高度<script type="math/tex">dy</script>=在<script type="math/tex">x_0</script>处的斜率 * <script type="math/tex">\Delta x</script>）。</p>
 </blockquote>
 <p>知道了这个我们再来看看<strong>梯度下降算法公式</strong>：</p>
 <script type="math/tex; mode=display">
-\theta_j := \theta_j - \alpha\frac{\partial J}{\partial\theta_j} \tag{*}</script><p>$\frac{\partial J}{\partial\theta_j}$ 可以简单的理解为上图中的$tga$，$\alpha$是个正常数，学名叫<strong>学习速率</strong>。这个$tga$很神奇，在小于90°，它是个正实数；在大于90°时是个负实数。</p>
-<p>所以，对于梯度下降算法公式，<br>当T倾斜向上，即角度小于90°时，$\alpha \frac{\partial J}{\partial\theta_j}$值为正，$\theta_j$从大变小，$\frac{\partial J}{\partial\theta_j}$不断的趋近于0，$\theta_j$不断的向左移动减小，直到移动到曲线的底部；<br><img src="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>当T倾斜向下时，即角度大于90°时，$\alpha  \frac{\partial J}{\partial\theta_j}$值为负，$\theta_j$从小变大，$\frac{\partial J}{\partial\theta_j}$不断的趋近于0，$\theta_j$不断的向右移动增大，直到移动到曲线的底部<br><img src="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
-<p>理解了原理，下面就是如何算<script type="math/tex">\frac{\partial J}{\partial\theta_j}</script>了：</p>
+\theta_j := \theta_j - \alpha\frac{\partial J}{\partial\theta_j} \tag{*}</script><script type="math/tex; mode=display">\frac{\partial J}{\partial\theta_j}$$ 可以简单的理解为上图中的$$tga$$，$$\alpha$$是个正常数，学名叫**学习速率**。这个$$tga$$很神奇，在小于90°，它是个正实数；在大于90°时是个负实数。
+
+所以，对于梯度下降算法公式，
+当T倾斜向上，即角度小于90°时，$$\alpha \frac{\partial J}{\partial\theta_j}$$值为正，$$\theta_j$$从大变小，$$\frac{\partial J}{\partial\theta_j}$$不断的趋近于0，$$\theta_j$$不断的向左移动减小，直到移动到曲线的底部；
+![这里写图片描述](http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+当T倾斜向下时，即角度大于90°时，$$\alpha  \frac{\partial J}{\partial\theta_j}$$值为负，$$\theta_j$$从小变大，$$\frac{\partial J}{\partial\theta_j}$$不断的趋近于0，$$\theta_j$$不断的向右移动增大，直到移动到曲线的底部
+![这里写图片描述](http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast)
+
+理解了原理，下面就是如何算$$\frac{\partial J}{\partial\theta_j}$$了：</script><p>\frac{\partial J}{\partial\theta<em>j}=\partial\frac{\frac{1}{2m}\sum</em>{i=1}^m(h_\theta(x^i)-y^i)^2 }{\partial\theta_j}</p>
 <script type="math/tex; mode=display">
-\frac{\partial J}{\partial\theta_j}=\partial\frac{\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2 }{\partial\theta_j}</script><p>把$\frac{1}{2m}\sum<em>{i=1}^m(h</em>\theta(x^i)-y^i)^2$展开：</p>
+
+把$\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2$展开：</script><p>J=\frac{1}{2m}[(h<em>\theta(x^1)-y^1)^2+h</em>\theta(x^2)-y^2)^2+\cdots+h_\theta(x^m)-y^m)^2]</p>
 <script type="math/tex; mode=display">
-J=\frac{1}{2m}[(h_\theta(x^1)-y^1)^2+h_\theta(x^2)-y^2)^2+\cdots+h_\theta(x^m)-y^m)^2]</script><p><strong>注意：上面的$x^1$表示第一个训练样本，而$y^1$是第一个训练样本所对应的真实目标值。</strong><br>我们对其中一个子式子继续展开研究：</p>
-<script type="math/tex; mode=display">\frac{\partial(h_\theta(x^1)-y^1)^2}{\partial\theta_j}=\frac{\partial[(\theta_0x_0^1+\theta_1x_1^1+\cdots+\theta_nx_n^1)-y^1]^2}{\partial\theta_j}</script><script type="math/tex; mode=display">
+**注意：上面的$$x^1$$表示第一个训练样本，而$$y^1$$是第一个训练样本所对应的真实目标值。**
+我们对其中一个子式子继续展开研究：
+$$\frac{\partial(h_\theta(x^1)-y^1)^2}{\partial\theta_j}=\frac{\partial[(\theta_0x_0^1+\theta_1x_1^1+\cdots+\theta_nx_n^1)-y^1]^2}{\partial\theta_j}</script><script type="math/tex; mode=display">
 =2((\theta_0x_0^1+\theta_1x_1^1+\cdots+\theta_nx_n^1)-y^1)x_j^1</script><p>简化成向量的形式：</p>
 <script type="math/tex; mode=display">
-\frac{\partial(h_\theta(x^1)-y^1)^2}{\partial\theta_j}=2( \begin{bmatrix} x_0^1&x_1^1&\cdots&x_n^1\end{bmatrix} \begin{bmatrix} \theta_0\\ \theta_1 \\ \vdots \\ \theta_n\end{bmatrix} - y^1)x_j^1==2(X^1\theta-y^1)  x_j^1</script><p>所以最终我们的梯度下降$\theta​$参数的确认式子为:</p>
+\frac{\partial(h_\theta(x^1)-y^1)^2}{\partial\theta_j}=2( \begin{bmatrix} x_0^1&x_1^1&\cdots&x_n^1\end{bmatrix} \begin{bmatrix} \theta_0\\ \theta_1 \\ \vdots \\ \theta_n\end{bmatrix} - y^1)x_j^1==2(X^1\theta-y^1)  x_j^1</script><p>所以最终我们的梯度下降<script type="math/tex">\theta​</script>参数的确认式子为:</p>
 <script type="math/tex; mode=display">
 \theta_j := \theta_j - \alpha \frac{1}{2m} \sum_{i=1}^m(2(X^i\theta-y^i)x_j^i) 
 =\theta_j- \alpha\frac{1}{m}\sum_{i=1}^m((X^i\theta-y^i)x_j^i)</script><script type="math/tex; mode=display">
@@ -308,7 +314,8 @@ X^n\theta-y^n
 <script type="math/tex; mode=display">\theta:=\theta-\alpha \frac{1}{m}(X^T(X\theta-Y)) \tag{*}</script><p>什么意思？意思是是只要不断的迭代$\theta$，最终$\alpha\frac{1}{m}(X^T(X\theta-Y))$会收敛到0，从而得到一个收敛后的$\theta$，获得最小值。</p>
 </blockquote>
 <h5 id="2-正规方程"><a href="#2-正规方程" class="headerlink" title="2. 正规方程"></a><strong>2. 正规方程</strong></h5><p>正规方程可以更快速简单的求解$\theta$值，再一起推导一下。<br>首先正规方程也是从这个方程而来：</p>
-<script type="math/tex; mode=display">J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2=\frac{1}{2m}[(h_\theta(x^1)-y^1)^2+\cdots+h_\theta(x^m)-y^m)^2]</script><p>因为<br>$X^TX=X^2$<br>所以</p>
+<script type="math/tex; mode=display">J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2=\frac{1}{2m}[(h_\theta(x^1)-y^1)^2+\cdots+h_\theta(x^m)-y^m)^2]</script><p>因为</p>
+<script type="math/tex; mode=display">X^TX=X^2</script><p>所以</p>
 <script type="math/tex; mode=display">
 J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta(x^n)-y^n)^T(h_\theta(x^n)-y^n)]</script><script type="math/tex; mode=display">
 =\frac{1}{2m}
@@ -324,9 +331,9 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
 (h_\theta(x^n)-y^n)
 \end{bmatrix}</script><script type="math/tex; mode=display">
 =\frac{1}{2m}(X\theta-y)^T(X\theta-y)</script><script type="math/tex; mode=display">
-=\frac{1}{2m}[\theta^TX^TX\theta-\theta^TX^Ty-y^TX\theta+y^Ty]</script><p>对$\theta$求导，且求导后的值要趋于0，所以：</p>
+=\frac{1}{2m}[\theta^TX^TX\theta-\theta^TX^Ty-y^TX\theta+y^Ty]</script><p>对<script type="math/tex">\theta</script>求导，且求导后的值要趋于0，所以：</p>
 <script type="math/tex; mode=display">
-\frac{\partial J}{\partial \theta}=\frac{\partial(\theta^TX^TX\theta-\theta^TX^Ty-y^TX\theta+y^2)}{\partial\theta}=0</script><p>因为$\theta^TX^Ty=y^TX\theta$所以有：</p>
+\frac{\partial J}{\partial \theta}=\frac{\partial(\theta^TX^TX\theta-\theta^TX^Ty-y^TX\theta+y^2)}{\partial\theta}=0</script><p>因为<script type="math/tex">\theta^TX^Ty=y^TX\theta</script>所以有：</p>
 <script type="math/tex; mode=display">
 \frac{\partial(\theta^TX^TX\theta-\theta^TX^Ty-y^TX\theta+y^2)}{\partial\theta}=X^TX\theta-2X^Ty=0</script><script type="math/tex; mode=display">
 (X^TX)^{-1}(X^TX)\theta=(X^TX)^{-1}X^Ty</script><script type="math/tex; mode=display">
@@ -337,7 +344,7 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82fhpz70000fgxulcgyc41q" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82gb5ag0000i5xu3diwz1xj" class="article-share-link">Share</a>
         
       </div>
     </footer>
