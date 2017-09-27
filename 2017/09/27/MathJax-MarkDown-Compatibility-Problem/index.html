@@ -1,21 +1,23 @@
 
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>categories | JohnWey&#39;s Blog</title>
+  <title>MathJax 和 MarkDown兼容性的问题 | JohnWey&#39;s Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+  <meta name="description" content="由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。 网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：  放弃next主题，使用hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MathJax 和 MarkDown兼容性的问题">
+<meta property="og:url" content="http://yoursite.com/2017/09/27/MathJax-MarkDown-Compatibility-Problem/index.html">
 <meta property="og:site_name" content="JohnWey&#39;s Blog">
+<meta property="og:description" content="由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。 网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：  放弃next主题，使用hexo">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-25T04:20:08.227Z">
+<meta property="og:updated_time" content="2017-09-27T04:24:26.827Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="MathJax 和 MarkDown兼容性的问题">
+<meta name="twitter:description" content="由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。 网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：  放弃next主题，使用hexo">
   
     <link rel="alternative" href="/atom.xml" title="JohnWey&#39;s Blog" type="application/atom+xml">
   
@@ -78,10 +80,10 @@
 </header>
 
     <div class="outer">
-      <section id="main"><article id="page-" class="article article-type-page" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-MathJax-MarkDown-Compatibility-Problem" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <h3 href="/categories/index.html" class="article-date">
-  <time datetime="2017-09-25T04:19:36.000Z" itemprop="datePublished">2017-09-25</time>
+    <h3 href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/" class="article-date">
+  <time datetime="2017-09-27T04:24:26.827Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -94,7 +96,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      categories
+      MathJax 和 MarkDown兼容性的问题
     </h1>
   
 
@@ -103,13 +105,22 @@
     <div class="article-entry" itemprop="articleBody">
       
         
-        
+        <p>由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。</p>
+<p>网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：</p>
+<ol>
+<li>放弃next主题，使用hexo-theme-paperbox代替<a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank" rel="external">github</a></li>
+<li>修改该主题下_config.yml文件，配置mathjax: true</li>
+<li>卸载默认的mark渲染组件，安装新的渲染组件<br>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</li>
+<li>更新站点并重启服务<br>hexo clean<br>hexo g -d<br>hexo s</li>
+</ol>
+<p>需要注意的是：对于需要在某一行显示数学公式的情况，只加$…$这样是不行的，需要在两个$符号首尾加上（`）号，如：`$….$`</p>
+
       
     </div>
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/categories/index.html" data-id="cj82la0yl00011bxug9mtuqzl" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/MathJax-MarkDown-Compatibility-Problem/" data-id="cj82la0yu00041bxujq9oo12j" class="article-share-link">Share</a>
         
       </div>
     </footer>
@@ -118,6 +129,16 @@
   </div>
   
     
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/27/ML-Linear Regression/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">机器学习第一周总结</div>
+    </a>
+  
+</nav>
+
   
 </article>
 
@@ -237,4 +258,3 @@
 </div>
 </body>
 </html>
-

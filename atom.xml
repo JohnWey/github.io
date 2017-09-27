@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-27T03:35:19.917Z</updated>
+  <updated>2017-09-27T04:24:26.827Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -15,6 +15,28 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>MathJax 和 MarkDown兼容性的问题</title>
+    <link href="http://yoursite.com/2017/09/27/MathJax-MarkDown-Compatibility-Problem/"/>
+    <id>http://yoursite.com/2017/09/27/MathJax-MarkDown-Compatibility-Problem/</id>
+    <published>2017-09-27T04:24:26.827Z</published>
+    <updated>2017-09-27T04:24:26.827Z</updated>
+    
+    <content type="html"><![CDATA[<p>由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。</p><p>网上很多解决方案已过时，为此折腾了好几天，很没必要，毕竟应该多花心思在写blog上，而不是如何配置它。这里提供另外一套解决方法：</p><ol><li>放弃next主题，使用hexo-theme-paperbox代替<a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank" rel="external">github</a></li><li>修改该主题下_config.yml文件，配置mathjax: true</li><li>卸载默认的mark渲染组件，安装新的渲染组件<br>npm uninstall hexo-renderer-marked —save<br>npm install hexo-renderer-kramed —save</li><li>更新站点并重启服务<br>hexo clean<br>hexo g -d<br>hexo s</li></ol><p>需要注意的是：对于需要在某一行显示数学公式的情况，只加$…$这样是不行的，需要在两个$符号首尾加上（`）号，如：`$….$`</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;由于下划线(_)以及反斜线(\) 是MarkDown的特殊字符，而这些字符在MathJax分别代表不同的含义（前者表示下标，后者双反斜线表示换行\\）,因此在渲染数学公式时，MarkDown会将这些字符作为其特殊字符，导致显示公式凌乱。&lt;/p&gt;
+&lt;p&gt;网上很多解决方案已过时
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>机器学习第一周总结</title>
