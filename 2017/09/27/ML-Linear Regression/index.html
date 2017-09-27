@@ -17,7 +17,7 @@
 <meta property="og:image" content="http://img.blog.csdn.net/20170914173743114?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
 <meta property="og:image" content="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast">
-<meta property="og:updated_time" content="2017-09-27T03:23:52.756Z">
+<meta property="og:updated_time" content="2017-09-27T03:35:19.917Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习第一周总结">
 <meta name="twitter:description" content="先搞清楚什么是机器学习，这对定位问题是否应该使用机器学习来解决很重要，有些问题完全没必要使用机器学习，就没必要杀鸡用牛刀了。  什么是机器学习? Arthur Samuel(1959):  Field of study that gives computers the ability to learn without being explicitly programmed.说人话：不需要太多的编程">
@@ -87,7 +87,7 @@
       <section id="main"><article id="post-ML-Linear Regression" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/09/27/ML-Linear Regression/" class="article-date">
-  <time datetime="2017-09-27T03:23:52.756Z" itemprop="datePublished">2017-09-27</time>
+  <time datetime="2017-09-27T03:35:19.917Z" itemprop="datePublished">2017-09-27</time>
 </h3>
     
   </div>
@@ -238,7 +238,7 @@ x_0^n & x_1^n & x_2^n  & \cdots & x_n^n \\
 \end{bmatrix}=X\theta</script><p>简不简单？有了这个公式，我们就能<strong>预测未来</strong>了：）</p>
 <hr>
 <h4 id="2-如何预测？"><a href="#2-如何预测？" class="headerlink" title="2. 如何预测？"></a><strong>2. 如何预测？</strong></h4><p>上面那个模型中<script type="math/tex">x</script>是确定的，即我们的各种特征数据，不确定的是<script type="math/tex">\theta</script>值。只要找到了<script type="math/tex">\theta</script>，我们就可以写出那个模型方程式，再把新的数据代入到$x$中，就知道了<strong>未来</strong>。所以，如何算出<script type="math/tex">\theta</script>?</p>
-<p>针对一元回归模型，不同的$\theta$意味这不同的斜率，不同的斜率他们和真实数据的拟合程度是不一样的。如何确定$\theta$使得预测的误差最小呢？</p>
+<p>针对一元回归模型，不同的<script type="math/tex">\theta</script>意味这不同的斜率，不同的斜率他们和真实数据的拟合程度是不一样的。如何确定<script type="math/tex">\theta</script>使得预测的误差最小呢？</p>
 <script type="math/tex; mode=display">
 J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h\theta(x^i)-y^i)^2</script><p>其中<script type="math/tex">y^i​</script>表示真实数据，而<script type="math/tex">h_\theta(x^i)​</script>表示预测数据。<br><strong>说人话：<script type="math/tex">\theta</script>要满足这样的条件，即预测出来各个点的值与真实值之间的差的平方和最小。</strong></p>
 <p>现在的问题就转换成了<strong>求<script type="math/tex">J(\theta)</script>的最小值</strong>问题了！<br>即：</p>
@@ -256,7 +256,7 @@ J(\theta)=\frac{1}{2m}\sum_{i=1}^m(h\theta(x^i)-y^i)^2</script><p>其中<script 
 <p>所以，对于梯度下降算法公式，<br>当T倾斜向上，即角度小于90°时，<script type="math/tex">\alpha \frac{\partial J}{\partial\theta_j}</script>值为正，<script type="math/tex">\theta_j</script>从大变小，<script type="math/tex">\frac{\partial J}{\partial\theta_j}</script>不断的趋近于0，<script type="math/tex">\theta_j</script>不断的向左移动减小，直到移动到曲线的底部；<br><img src="http://img.blog.csdn.net/20170914183926463?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"><br>当T倾斜向下时，即角度大于90°时，<script type="math/tex">\alpha  \frac{\partial J}{\partial\theta_j}</script>值为负，<script type="math/tex">\theta_j</script>从小变大，<script type="math/tex">\frac{\partial J}{\partial\theta_j}</script>不断的趋近于0，<script type="math/tex">\theta_j</script>不断的向右移动增大，直到移动到曲线的底部<br><img src="http://img.blog.csdn.net/20170914184358503?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvSm9obldleQ==/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" alt="这里写图片描述"></p>
 <p>理解了原理，下面就是如何算<script type="math/tex">\frac{\partial J}{\partial\theta_j}</script>了：</p>
 <script type="math/tex; mode=display">
-\frac{\partial J}{\partial\theta_j}=\partial\frac{\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2 }{\partial\theta_j}</script><p>把$\frac{1}{2m}\sum<em>{i=1}^m(h</em>\theta(x^i)-y^i)^2$展开：</p>
+\frac{\partial J}{\partial\theta_j}=\partial\frac{\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2 }{\partial\theta_j}</script><p>把<script type="math/tex">\frac{1}{2m}\sum_{i=1}^m(h_\theta(x^i)-y^i)^2</script>展开：</p>
 <script type="math/tex; mode=display">
 J=\frac{1}{2m}[(h_\theta(x^1)-y^1)^2+h_\theta(x^2)-y^2)^2+\cdots+h_\theta(x^m)-y^m)^2]</script><p><strong>注意：上面的<script type="math/tex">x^1</script>表示第一个训练样本，而<script type="math/tex">y^1</script>是第一个训练样本所对应的真实目标值。</strong><br>我们对其中一个子式子继续展开研究：</p>
 <script type="math/tex; mode=display">\frac{\partial(h_\theta(x^1)-y^1)^2}{\partial\theta_j}=\frac{\partial[(\theta_0x_0^1+\theta_1x_1^1+\cdots+\theta_nx_n^1)-y^1]^2}{\partial\theta_j}</script><script type="math/tex; mode=display">
@@ -331,14 +331,38 @@ J(\theta)=\frac{1}{2m}[(h_\theta(x^1)-y^1)^T(h_\theta(x^1)-y^1)+\cdots+(h_\theta
 <script type="math/tex; mode=display">
 \frac{\partial(\theta^TX^TX\theta-\theta^TX^Ty-y^TX\theta+y^2)}{\partial\theta}=X^TX\theta-2X^Ty=0</script><script type="math/tex; mode=display">
 (X^TX)^{-1}(X^TX)\theta=(X^TX)^{-1}X^Ty</script><script type="math/tex; mode=display">
-\theta=(X^TX)^{-1}X^Ty \tag{*}</script><p><strong>梯度方法和正规方程方法比较：</strong><br>| 梯度下降方法       | 正规方程        |<br>| :—————- | :————— |<br>| 适合特征大于1W的情况  | 适合特征小于1W的情况 |<br>| 需要归一化（特征标准化） | 不需要归一化      |<br>| 方法相对复杂       | 方法简单        |</p>
+\theta=(X^TX)^{-1}X^Ty \tag{*}</script><p><strong>梯度方法和正规方程方法比较：</strong></p>
+<div class="table-container">
+<table>
+<thead>
+<tr>
+<th style="text-align:left">梯度下降方法</th>
+<th style="text-align:left">正规方程</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">适合特征大于1W的情况</td>
+<td style="text-align:left">适合特征小于1W的情况</td>
+</tr>
+<tr>
+<td style="text-align:left">需要归一化（特征标准化）</td>
+<td style="text-align:left">不需要归一化</td>
+</tr>
+<tr>
+<td style="text-align:left">方法相对复杂</td>
+<td style="text-align:left">方法简单</td>
+</tr>
+</tbody>
+</table>
+</div>
 <h5 id="注：以上数学推导过程若有不严谨之处，欢迎指出！"><a href="#注：以上数学推导过程若有不严谨之处，欢迎指出！" class="headerlink" title=" 注：以上数学推导过程若有不严谨之处，欢迎指出！"></a><strong> 注：以上数学推导过程若有不严谨之处，欢迎指出！</strong></h5>
       
     </div>
     <footer class="article-footer">
       <div class="article-footer-content">
         
-        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82gvp7w0000kxxuk51nh3kw" class="article-share-link">Share</a>
+        <a data-url="http://yoursite.com/2017/09/27/ML-Linear Regression/" data-id="cj82hagjq0000nlxuo8gim80h" class="article-share-link">Share</a>
         
       </div>
     </footer>
