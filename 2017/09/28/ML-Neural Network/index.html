@@ -15,7 +15,8 @@
 <meta property="og:description" content="1. 为什么需要神经网络对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。 2. 神经网络原理 不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（outpu">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://www.tivix.com/uploads/images/abstract-neurons-desktop-hd-wallpaper-14618-6.height-312.jpg">
-<meta property="og:updated_time" content="2017-09-28T00:38:01.174Z">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/8c5975bcgy1fjyz8wsl3gj20yt0sr75n.jpg">
+<meta property="og:updated_time" content="2017-09-28T00:43:59.577Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="机器学习第三周总结——Neural Network">
 <meta name="twitter:description" content="1. 为什么需要神经网络对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。 2. 神经网络原理 不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（outpu">
@@ -85,7 +86,7 @@
       <section id="main"><article id="post-ML-Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2017/09/28/ML-Neural Network/" class="article-date">
-  <time datetime="2017-09-28T00:38:01.174Z" itemprop="datePublished">2017-09-28</time>
+  <time datetime="2017-09-28T00:43:59.577Z" itemprop="datePublished">2017-09-28</time>
 </h3>
     
   </div>
@@ -123,13 +124,14 @@ a_1^{(2)}\\
 a_2^{(2)}\\
 a_3^{(2)}\\
 \end{bmatrix}->
-h_\theta(x)\\</script><p>其中： </p>
-<script type="math/tex; mode=display">a_i^{(j)}$$ 表示 j 层上第 i 个神经元
-$$\theta^{(j)}$$ 表示从 j 层传递到 j+1层的权重
-
-![传导](http://ww1.sinaimg.cn/large/8c5975bcgy1fjyz8wsl3gj20yt0sr75n.jpg)</script><p>a<em>1^{(2)}=g(\theta</em>{10}^{(1)}x<em>0+\theta</em>{11}^{(1)}x<em>1+\theta</em>{12}^{(1)}x<em>2+\theta</em>{13}^{(1)}x<em>3) \<br>a_2^{(2)}=g(\theta</em>{20}^{(1)}x<em>0+\theta</em>{21}^{(1)}x<em>1+\theta</em>{22}^{(1)}x<em>2+\theta</em>{23}^{(1)}x<em>3) \<br>a_3^{(2)}=g(\theta</em>{30}^{(1)}x<em>0+\theta</em>{31}^{(1)}x<em>1+\theta</em>{32}^{(1)}x<em>2+\theta</em>{33}^{(1)}x<em>3) \<br>h</em>\theta(x)=h<em>1^{(3)}<br>=g(\theta</em>{10}^{(2)}a<em>0^{(2)}+\theta</em>{11}^{(2)}a<em>1^{(2)}+\theta</em>{12}^{(2)}a<em>2^{(2)}+\theta</em>{13}^{(2)}a_3^{(2)})</p>
+h_\theta(x)\\</script><p>其中： <script type="math/tex">a_i^{(j)}</script> 表示 j 层上第 i 个神经元 ；<script type="math/tex">\theta^{(j)}</script> 表示从 j 层传递到 j+1层的权重<br><img src="http://ww1.sinaimg.cn/large/8c5975bcgy1fjyz8wsl3gj20yt0sr75n.jpg" alt="传导"></p>
 <script type="math/tex; mode=display">
-其中$$\theta$$的大小为$$S_{j+1} \times S_j</script>
+a_1^{(2)}=g(\theta_{10}^{(1)}x_0+\theta_{11}^{(1)}x_1+\theta_{12}^{(1)}x_2+\theta_{13}^{(1)}x_3) \\
+a_2^{(2)}=g(\theta_{20}^{(1)}x_0+\theta_{21}^{(1)}x_1+\theta_{22}^{(1)}x_2+\theta_{23}^{(1)}x_3) \\
+a_3^{(2)}=g(\theta_{30}^{(1)}x_0+\theta_{31}^{(1)}x_1+\theta_{32}^{(1)}x_2+\theta_{33}^{(1)}x_3) \\
+h_\theta(x)=h_1^{(3)} 
+=g(\theta_{10}^{(2)}a_0^{(2)}+\theta_{11}^{(2)}a_1^{(2)}+\theta_{12}^{(2)}a_2^{(2)}+\theta_{13}^{(2)}a_3^{(2)})</script><p>其中<script type="math/tex">\theta</script>的大小为<script type="math/tex">S_{j+1} \times S_j</script></p>
+
       
     </div>
     <footer class="article-footer">
