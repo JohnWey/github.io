@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2017/09/28/ML-Neural%20Network/</loc>
+    
+    <lastmod>2017-09-28T00:20:22.605Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2017/09/27/ML-Logistic%20Regression/</loc>
     
     <lastmod>2017-09-27T07:12:51.886Z</lastmod>

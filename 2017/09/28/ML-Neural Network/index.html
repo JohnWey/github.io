@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  
+  <title>机器学习第三周总结——Neural Network | JohnWey&#39;s Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1. 为什么需要神经网络对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。 2. 神经网络原理 不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（outpu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习第三周总结——Neural Network">
+<meta property="og:url" content="http://yoursite.com/2017/09/28/ML-Neural Network/index.html">
+<meta property="og:site_name" content="JohnWey&#39;s Blog">
+<meta property="og:description" content="1. 为什么需要神经网络对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。 2. 神经网络原理 不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（outpu">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://www.tivix.com/uploads/images/abstract-neurons-desktop-hd-wallpaper-14618-6.height-312.jpg">
+<meta property="og:updated_time" content="2017-09-28T00:20:22.605Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习第三周总结——Neural Network">
+<meta name="twitter:description" content="1. 为什么需要神经网络对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。 2. 神经网络原理 不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（outpu">
+<meta name="twitter:image" content="http://www.tivix.com/uploads/images/abstract-neurons-desktop-hd-wallpaper-14618-6.height-312.jpg">
+  
+    <link rel="alternative" href="/atom.xml" title="JohnWey&#39;s Blog" type="application/atom+xml">
+  
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+    <link href="//fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+  
+
+</head>
+
+<body>
+<div id="container">
+  <div id="wrap">
+    <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <nav id="upper-nav" class="inner">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <div class="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        
+          <a id="nav-github" class="nav-icon" href="https://github.com/JohnWey"></a>
+        
+      </div>
+    </nav>
+    <div id="header-title">
+      
+        <h1 id="blog-title-wrap">
+          <a href="/" id="blog-title">JohnWey&#39;s Blog</a>
+        </h1>
+      
+    </div>
+    <div id="contenedor">
+      <ul class="cube">
+        <li class="cara">MyLogo</li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+        <li class="cara"></li>
+      </ul>
+    </div>
+    <nav id="main-nav">
+      
+        <a class="main-nav-link" href="/">Home</a>
+      
+        <a class="main-nav-link" href="/archives">Archives</a>
+      
+        <a class="main-nav-link" href="/about">About</a>
+      
+      <a class="main-nav-link st-search-show-outputs">Search</a>
+    </nav>
+  </div>
+</header>
+
+    <div class="outer">
+      <section id="main"><article id="post-ML-Neural Network" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <h3 href="/2017/09/28/ML-Neural Network/" class="article-date">
+  <time datetime="2017-09-28T00:20:22.605Z" itemprop="datePublished">2017-09-28</time>
+</h3>
+    
+  </div>
+  <div class="article-inner">
+  <div class="curve-down">
+  <div class="fill-content">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      机器学习第三周总结——Neural Network
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        
+        <h3 id="1-为什么需要神经网络"><a href="#1-为什么需要神经网络" class="headerlink" title="1. 为什么需要神经网络"></a>1. 为什么需要神经网络</h3><p>对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。</p>
+<h3 id="2-神经网络原理"><a href="#2-神经网络原理" class="headerlink" title="2. 神经网络原理"></a>2. 神经网络原理</h3><p><img src="http://www.tivix.com/uploads/images/abstract-neurons-desktop-hd-wallpaper-14618-6.height-312.jpg" alt="原理"></p>
+<p>不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（output zone）。<br><strong> 接收区（receptive zone）</strong>：为树突到胞体的部份，会有电位的变化，能接受不同来源的突触，如果接收的来源越多，对胞体膜电位的影响越大，反之。而接受的讯息在胞体内整合。<br><strong> 触发区（trigger zone）</strong>：在胞体整合的电位，决定是否产生神经冲动的起始点。位于轴突和胞体交接的地方。也就是轴丘（axon hillock）的部份。<br><strong> 传导区（conducting zone）</strong>：为轴突的部份，当产生动作电位（action potential）时，传导区能遵守全有全无的定律（all or none）来传导神经冲动。</p>
+<p>我们把接收区抽象为Input layer；触发区抽象为Hidden layer；传导区抽象为Output layer，这样我们的神经网络模型就形成了：</p>
+<script type="math/tex; mode=display">
+\begin{bmatrix}
+x_0 \\
+x_1 \\
+x_2 \\
+x_3 \\
+\end{bmatrix} ->
+\begin{bmatrix}
+a_1^{(2)} \\
+a_2^{(2)} \\
+a_3^{(2)} \\
+\end{bmatrix} ->
+h_\theta(x) \\</script><p>其中： </p>
+<script type="math/tex; mode=display">a_i^{(j)}$$ 表示 j 层上第 i 个神经元
+$$\theta^{(j)}$$ 表示从 j 层传递到 j+1层的权重
+
+![传导](C:\Users\admin\Desktop\ML\NW传导.jpg)</script><p>a<em>1^{(2)}=g(\theta</em>{10}^{(1)}x<em>0+\theta</em>{11}^{(1)}x<em>1+\theta</em>{12}^{(1)}x<em>2+\theta</em>{13}^{(1)}x<em>3) \<br>a_2^{(2)}=g(\theta</em>{20}^{(1)}x<em>0+\theta</em>{21}^{(1)}x<em>1+\theta</em>{22}^{(1)}x<em>2+\theta</em>{23}^{(1)}x<em>3) \<br>a_3^{(2)}=g(\theta</em>{30}^{(1)}x<em>0+\theta</em>{31}^{(1)}x<em>1+\theta</em>{32}^{(1)}x<em>2+\theta</em>{33}^{(1)}x<em>3) \<br>h</em>\theta(x)=h<em>1^{(3)}<br>=g(\theta</em>{10}^{(2)}a<em>0^{(2)}+\theta</em>{11}^{(2)}a<em>1^{(2)}+\theta</em>{12}^{(2)}a<em>2^{(2)}+\theta</em>{13}^{(2)}a_3^{(2)})</p>
+<script type="math/tex; mode=display">
+其中$$\theta$$的大小为$$S_{j+1} \times S_j</script>
+      
+    </div>
+    <footer class="article-footer">
+      <div class="article-footer-content">
+        
+        <a data-url="http://yoursite.com/2017/09/28/ML-Neural Network/" data-id="cj83prxdt0004o8xuibf5q4f6" class="article-share-link">Share</a>
+        
+      </div>
+    </footer>
+  </div>
+  </div>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/09/27/ML-Logistic Regression/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">机器学习第二周总结——Logistic Regression</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+      
+      <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/09/28/ML-Neural Network/">机器学习第三周总结——Neural Network</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/27/ML-Logistic Regression/">机器学习第二周总结——Logistic Regression</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/27/ML-Linear Regression/">机器学习第一周总结——Linear Regression</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/27/MathJax-MarkDown-Compatibility-Problem/">MathJax 和 MarkDown兼容性的问题</a>
+          </li>
+        
+          <li>
+            <a href="/2017/09/13/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/09/">September 2017</a><span class="archive-list-count">5</span></li></ul>
+    </div>
+  </div>
+
+  
+</aside>
+      
+    </div>
+    <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Wei<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      Theme by <a href="https://github.com/sun11/hexo-theme-paperbox" target="_blank">Paperbox</a>
+    </div>
+  </div>
+</footer>
+  </div>
+  <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/about" class="mobile-nav-link">About</a>
+  
+  <a href="#search" class="mobile-nav-link st-search-show-outputs">Search</a>
+</nav>
+  
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    menuSettings: {
+      zoom: "None"
+    },
+    showMathMenu: false,
+    jax: ["input/TeX","output/CommonHTML"],
+    extensions: ["tex2jax.js"],
+    TeX: {
+      extensions: ["AMSmath.js","AMSsymbols.js"],
+      equationNumbers: {
+        autoNumber: "AMS"
+      }
+    },
+  });
+</script>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/mathjax/2.6.1/MathJax.js"></script>
+
+
+
+<!-- totop start -->
+<div id="totop">
+	<a title="To Top"></a>
+</div>
+<!-- totop end -->
+
+<!-- swiftype search start -->
+
+<!-- swiftype search end -->
+
+
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/lrsjng.jquery-qrcode/0.12.0/jquery.qrcode.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+</div>
+</body>
+</html>
