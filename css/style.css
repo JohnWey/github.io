@@ -887,7 +887,7 @@ a.article-title:hover {
 .article-entry .MathJax_Display,
 .article-entry .MJXc-display,
 .article-entry .MathJax_SVG_Display {
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .article-entry .MathJax_Display > span,
 .article-entry .MJXc-display > span {
