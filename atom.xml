@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-09-28T00:49:15.505Z</updated>
+  <updated>2017-09-28T01:02:07.165Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <title>机器学习第三周总结——Neural Network</title>
     <link href="http://yoursite.com/2017/09/28/ML-Neural%20Network/"/>
     <id>http://yoursite.com/2017/09/28/ML-Neural Network/</id>
-    <published>2017-09-28T00:49:15.505Z</published>
-    <updated>2017-09-28T00:49:15.505Z</updated>
+    <published>2017-09-28T01:02:07.165Z</published>
+    <updated>2017-09-28T01:02:07.165Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="1-为什么需要神经网络"><a href="#1-为什么需要神经网络" class="headerlink" title="1. 为什么需要神经网络"></a>1. 为什么需要神经网络</h3><p>对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。</p><h3 id="2-神经网络原理"><a href="#2-神经网络原理" class="headerlink" title="2. 神经网络原理"></a>2. 神经网络原理</h3><p><img src="http://www.tivix.com/uploads/images/abstract-neurons-desktop-hd-wallpaper-14618-6.height-312.jpg" alt="原理"></p><p>不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（output zone）。<br><strong> 接收区（receptive zone）</strong>：为树突到胞体的部份，会有电位的变化，能接受不同来源的突触，如果接收的来源越多，对胞体膜电位的影响越大，反之。而接受的讯息在胞体内整合。<br><strong> 触发区（trigger zone）</strong>：在胞体整合的电位，决定是否产生神经冲动的起始点。位于轴突和胞体交接的地方。也就是轴丘（axon hillock）的部份。<br><strong> 传导区（conducting zone）</strong>：为轴突的部份，当产生动作电位（action potential）时，传导区能遵守全有全无的定律（all or none）来传导神经冲动。</p><p>我们把接收区抽象为Input layer；触发区抽象为Hidden layer；传导区抽象为Output layer，这样我们的神经网络模型就形成了：</p><script type="math/tex; mode=display">\begin{bmatrix}x_0\\x_1\\x_2\\x_3\\\end{bmatrix}->\begin{bmatrix}a_1^{(2)}\\a_2^{(2)}\\a_3^{(2)}\\\end{bmatrix}->h_\theta(x)\\</script><p>其中： a_i^{(j)} 表示 j 层上第 i 个神经元 ；<script type="math/tex">\theta^{(j)}</script> 表示从 j 层传递到 j+1层的权重<br><img src="http://ww1.sinaimg.cn/large/8c5975bcgy1fjyz8wsl3gj20yt0sr75n.jpg" alt="传导"></p><script type="math/tex; mode=display">a_1^{(2)}=g(\theta_{10}^{(1)}x_0+\theta_{11}^{(1)}x_1+\theta_{12}^{(1)}x_2+\theta_{13}^{(1)}x_3) \\a_2^{(2)}=g(\theta_{20}^{(1)}x_0+\theta_{21}^{(1)}x_1+\theta_{22}^{(1)}x_2+\theta_{23}^{(1)}x_3) \\a_3^{(2)}=g(\theta_{30}^{(1)}x_0+\theta_{31}^{(1)}x_1+\theta_{32}^{(1)}x_2+\theta_{33}^{(1)}x_3) \\h_\theta(x)=h_1^{(3)} =g(\theta_{10}^{(2)}a_0^{(2)}+\theta_{11}^{(2)}a_1^{(2)}+\theta_{12}^{(2)}a_2^{(2)}+\theta_{13}^{(2)}a_3^{(2)})</script><p>其中<script type="math/tex">\theta</script>的大小为<script type="math/tex">S_{j+1} \times S_j</script></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="1-为什么需要神经网络"><a href="#1-为什么需要神经网络" class="headerlink" title="1. 为什么需要神经网络"></a>1. 为什么需要神经网络</h3><p>对于逻辑回归算法，如果特征有成千上万个，那么方程所涉及的阶项的组合会很庞大（二阶项，三阶项等）。如果所有阶项都拟合，很可能会overfit；如果删除一些特征项，又可能把重要的特征项忽略掉。</p><h3 id="2-神经网络原理"><a href="#2-神经网络原理" class="headerlink" title="2. 神经网络原理"></a>2. 神经网络原理</h3><p><img src="http://www.tivix.com/uploads/images/abstract-neurons-desktop-hd-wallpaper-14618-6.height-312.jpg" alt="原理"></p><p>不论是何种神经元，皆可分成：接收区（receptive zone）、触发区（trigger zone）、传导区（conducting zone），和输出区（output zone）。<br><strong> 接收区（receptive zone）</strong>：为树突到胞体的部份，会有电位的变化，能接受不同来源的突触，如果接收的来源越多，对胞体膜电位的影响越大，反之。而接受的讯息在胞体内整合。<br><strong> 触发区（trigger zone）</strong>：在胞体整合的电位，决定是否产生神经冲动的起始点。位于轴突和胞体交接的地方。也就是轴丘（axon hillock）的部份。<br><strong> 传导区（conducting zone）</strong>：为轴突的部份，当产生动作电位（action potential）时，传导区能遵守全有全无的定律（all or none）来传导神经冲动。</p><p>我们把接收区抽象为Input layer；触发区抽象为Hidden layer；传导区抽象为Output layer，这样我们的神经网络模型就形成了：</p><script type="math/tex; mode=display">\begin{bmatrix}x_0\\x_1\\x_2\\x_3\\\end{bmatrix}->\begin{bmatrix}a_1^{(2)}\\a_2^{(2)}\\a_3^{(2)}\\\end{bmatrix}->h_\theta(x)\\</script><p>其中：  <script type="math/tex">a_i^{(j)}</script> 表示 j 层上第 i 个神经元 ；<script type="math/tex">\theta^{(j)}</script> 表示从 j 层传递到 j+1层的权重      </p><p>  <img src="http://ww1.sinaimg.cn/large/8c5975bcgy1fjyz8wsl3gj20yt0sr75n.jpg" alt="传导"></p><script type="math/tex; mode=display">a_1^{(2)}=g(\theta_{10}^{(1)}x_0+\theta_{11}^{(1)}x_1+\theta_{12}^{(1)}x_2+\theta_{13}^{(1)}x_3) \\a_2^{(2)}=g(\theta_{20}^{(1)}x_0+\theta_{21}^{(1)}x_1+\theta_{22}^{(1)}x_2+\theta_{23}^{(1)}x_3) \\a_3^{(2)}=g(\theta_{30}^{(1)}x_0+\theta_{31}^{(1)}x_1+\theta_{32}^{(1)}x_2+\theta_{33}^{(1)}x_3) \\h_\theta(x)=h_1^{(3)} =g(\theta_{10}^{(2)}a_0^{(2)}+\theta_{11}^{(2)}a_1^{(2)}+\theta_{12}^{(2)}a_2^{(2)}+\theta_{13}^{(2)}a_3^{(2)})</script><p>其中<script type="math/tex">\theta</script>的大小为<script type="math/tex">S_{j+1} \times S_j</script></p>]]></content>
     
     <summary type="html">
     
